@@ -1,4 +1,4 @@
-# mascota2
+# mascota11
 
 Descripciín basisca de su Proyecto de POO ...
 
@@ -37,5 +37,5 @@ Para generar el jar puede usar el comando:
 y para ejecutar el jar
 
 ```shell
- java -jar target/mascota2-1.0.jar
+ java -jar target/mascota11-1.0.jar
 ```
