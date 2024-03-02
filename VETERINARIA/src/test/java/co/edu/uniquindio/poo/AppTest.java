@@ -1,7 +1,7 @@
 /**
  * Clase para probar el funcionamiento del código
  * @author Allison López 
- * @since 2023-08
+ * @since 2024-02
  * 
  * Licencia GNU/GPL V3.0 (https://raw.githubusercontent.com/grid-uq/poo/main/LICENSE) 
  */
@@ -38,7 +38,7 @@ public class AppTest {
     public void FemeninoMasculino() {
         LOG.info("Iniciado test mascota de genero femenino o masculino");
 
-        Mascota mascota = new Mascota("Praga", "Perro", "Pomerania", (byte)3, "Femenino", "Blanco", 10.2);
+        Mascota mascota = new Mascota("Praga", "Perro", "Pomerania", (byte)3, "Masculino", "Blanco", 10.2);
 
         String genero = mascota.genero();
             
@@ -52,10 +52,10 @@ public class AppTest {
     }
 
     @Test
-    public void EdadNoMayor30() {
+    public void EdadNoMayor() {
         LOG.info("Iniciado test edad no mayor a 30");
 
-        Mascota mascota = new Mascota("Praga", "Perro", "Pomerania", (byte)3, "Femenino", "Blanco", 10.2);
+        Mascota mascota = new Mascota("Praga", "Perro", "Pomerania", (byte)29, "Femenino", "Blanco", 10.2);
 
         if (mascota.edad() > 30) {
             throw new IllegalArgumentException("La edad no puede ser mayor a 30 años");
@@ -86,8 +86,8 @@ public class AppTest {
         Mascota mascota = new Mascota("Praga", "Perro", "Pomerania", (byte)3, "Femenino", "Blanco", 10.2);
 
         double peso = mascota.peso();
-        if (peso < 0 || peso > 100) {
-            throw new IllegalArgumentException("El peso debe de estar entre 0 Kg y 100Kg");
+        if (peso < 0 || peso > 800) {
+            throw new IllegalArgumentException("El peso debe de estar entre 0 Kg y 800Kg");
         }
 
         LOG.info("Finalizando test peso entre un rango");
